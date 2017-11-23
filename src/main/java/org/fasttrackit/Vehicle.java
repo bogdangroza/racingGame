@@ -13,6 +13,11 @@ public class Vehicle {
 
         return 10.1;
     }
+    //Metod Overloading
+    public double accelerate(double speed, double time) {
+
+        return 20;
+    }
 
 
 
@@ -30,5 +35,16 @@ public class Vehicle {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+
+    //Override
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "name='" + name + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }

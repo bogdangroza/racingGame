@@ -1,17 +1,23 @@
 package org.fasttrackit;
 
-public class AutoVehicle extends  Vehicle {
+public class AutoVehicle extends Vehicle {
 
     private double mileage;
     private double fuelLevel;
     private Engine engine;
 
-    // Constructor
+    // Constructor cu parametru engine(sa aiba cel putin un motor)
     public AutoVehicle(Engine engine) {
         this.engine = engine;
 
         //System.out.println("Custom constructor called.");
     }
+
+    //Constructor Overloading(putem sa avem mai multi constructorii intr-o clasa cu lista de parametri diferite) fara parametru
+    public AutoVehicle() {
+        this(new Engine());
+    }
+
 
     public double getMileage() {
         return mileage;
